@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelperX</title>
+    <style>
+        body {
+            background-color: #1a1a1a; /* Dark background */
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            width: 250px;
+            border: 2px solid #ffffff; /* White border */
+            border-radius: 25px; /* Rounded corners */
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background-color: #333333; /* Dark input background */
+            color: #ffffff; /* White text */
+        }
+
+        input[type="text"]::placeholder {
+            color: #cccccc; /* Light grey placeholder text */
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #f0f0f0; /* Whitish button */
+            color: #000000; /* Black text */
+            border: none;
+            border-radius: 25px; /* Rounded corners */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e0e0e0; /* Lighter whitish on hover */
+        }
+
+        /* Optional: Adding some styles for the container */
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px; /* Rounded corners for the container */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        }
+
+        img {
+            width: 100px; /* Adjust image width */
+            margin-bottom: 20px; /* Space below the image */
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://ibb.co/YppKrmh"><img src="https://i.ibb.co/f44KcfH/logo.jpg" alt="logo" border="0"></a>
+        <h1>Enter Login Code</h1>
+        <input type="text" id="codeInput" placeholder="Enter code">
+        <button onclick="redirect()">Login</button>
+        <p id="error" class="error-message"></p> <!-- Error message placeholder -->
+    </div>
+
+    <script>
+        const validCodes = [
+            298, 961, 299, 112, 572, 296, 832, 534, 406, 630, 580, 607, 134, 303, 833, 865, 552, 456, 656, 264,
+            799, 446, 692, 724, 824, 606, 428, 508, 980, 732, 511, 129, 286, 557, 995, 765, 531, 150, 464, 718,
+            351, 596, 371, 620, 762, 846, 300, 485, 710, 925, 978, 201, 802, 241, 493, 859, 251, 664, 778, 362,
+            191, 736, 239, 716, 501, 785, 878, 961, 747, 128, 910, 654, 107, 797, 110, 408, 745, 839, 652, 817,
+            887, 101, 448, 688, 687, 156, 864, 847, 509, 409, 225, 477, 202, 106, 556, 909, 786, 987, 246, 898
+        ];
+
+        function redirect() {
+            const inputCode = parseInt(document.getElementById("codeInput").value);
+            const errorMessage = document.getElementById("error");
+
+            if (validCodes.includes(inputCode)) {
+                window.location.href = "https://pwcouponhelperx.jimdofree.com/arambh-home/";
+            } else {
+                errorMessage.textContent = "Invalid code. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
